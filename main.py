@@ -58,7 +58,7 @@ def GetParentTags():                    # Returns only valid parent tags
                     #red.font.color.rgb = RGBColor(255, 0, 0)
 
                     #print(y[0])
-                    qe.append(y[0])
+                    qe.append(y[0])#adds to parent tag list
                 index = index + 1
             # print(ind)
             else:
@@ -71,7 +71,7 @@ def GetParentTags():                    # Returns only valid parent tags
                     #red.bold = True
                     #red.font.color.rgb = RGBColor(255, 0, 0)
                     #print(y[0])
-                    qe.append(y[0])
+                    qe.append(y[0]) #adds to parent tag list
                 index = index + 1
 
             #print(ind)
@@ -93,7 +93,7 @@ def GetChildTags():                     # Returns only valid child tags
                         #green.font.color.rgb = RGBColor(0x00, 0xFF, 0x00)
                         #green.bold = True
                         #print(y[0])
-                        qa.append(y[0])
+                        qa.append(y[0])#adds to child tag list
                 index = index + 1
                 # print(ind)
             else:
@@ -107,7 +107,7 @@ def GetChildTags():                     # Returns only valid child tags
                         #green.font.color.rgb = RGBColor(0x00, 0xFF, 0x00)
                         #green.bold = True
                         #print(y[0])
-                        qa.append(y[0])
+                        qa.append(y[0]) #adds to child tag list
                 index = index + 1
 
             #print(ind)
@@ -129,7 +129,7 @@ def GetOrphanTags():
                 #green.bold = True
 
                 #print(y[0])
-                q.append(y[0])
+                q.append(y[0]) #adds to orphan tag list
                 index = index + 1
 
                 # print(ind)
@@ -148,9 +148,9 @@ def GetOrphanTags():
             #    index = index + 1
             # print(ind)
 
-qe = []
-qa = []
-q = []
+qe = [] #list of parent tags
+qa = [] #List of cild tags
+q = [] #List for orphans
 #runner2 = paragraph.add_run("\n\nParent tag/tags\n\n")
 #runner2.bold = True                              #make it bold
 GetParentTags()
@@ -158,8 +158,8 @@ GetParentTags()
 #runner2 = paragraph.add_run("\n\nChild tag/tags\n\n")
 #runner2.bold = True
 GetChildTags()
-print(qe) # Parent tags
-print(qa) #Child tags
+print(qe) # prints Parent tags
+print(qa) #prints Child tags
 #print(q)
 num = 0
 while qe and qa:
