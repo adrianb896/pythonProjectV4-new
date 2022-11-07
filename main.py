@@ -206,13 +206,16 @@ while qe and qa:
     #green.bold = True
     qe.remove(qe[0])
     #red = paragraph.add_run(child[0])
-    row[1].text = qa[0]
-    #paragraph.add_run("\n\n")
-    #red.bold = True
-    #red.font.color.rgb = RGBColor(255, 0, 0)
-    qa.remove(qa[0])
+
+    if qa:
+        row[1].text = qa[0]
+        #paragraph.add_run("\n\n")
+        #red.bold = True
+        #red.font.color.rgb = RGBColor(255, 0, 0)
+        qa.remove(qa[0])
 
 while qe:
+    row = table.add_row().cells # Adding a row and then adding data in it.
     row[0].text = qe[0]
     #green = paragraph.add_run(sentences[0])
     #paragraph.add_run("\n\n")
@@ -222,7 +225,7 @@ while qe:
 
 
 #paragraph.add_run(f)
-report3.save('report3.docx')
+
 
 
 
