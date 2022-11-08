@@ -204,15 +204,21 @@ while qe and qa:
     #paragraph.add_run("\n\n")
     #green.font.color.rgb = RGBColor(0x00, 0xFF, 0x00)
     #green.bold = True
-    qe.remove(qe[0])
-    #red = paragraph.add_run(child[0])
 
+    #red = paragraph.add_run(child[0])
+    noChild = ["PUMP:RISK"]
     if qa:
-        row[1].text = qa[0]
+        if noChild[0] not in qe[0]:
+            row[1].text = qa[0]
+            qa.remove(qa[0])
+            qe.remove(qe[0])
+        else:
+            row[1].text = " "
         #paragraph.add_run("\n\n")
         #red.bold = True
         #red.font.color.rgb = RGBColor(255, 0, 0)
-        qa.remove(qa[0])
+            qa.remove(qa[0])
+            qe.remove(qe[0])
 
 while qe:
     row = table.add_row().cells # Adding a row and then adding data in it.
@@ -238,4 +244,3 @@ while qe:
 
 report3.save('report3.docx')
 #GetOrphanTags()
-
