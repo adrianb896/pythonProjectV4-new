@@ -217,7 +217,6 @@ while qe and qa:
         #paragraph.add_run("\n\n")
         #red.bold = True
         #red.font.color.rgb = RGBColor(255, 0, 0)
-            qa.remove(qa[0])
             qe.remove(qe[0])
 
 while qe:
