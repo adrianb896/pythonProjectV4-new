@@ -443,7 +443,7 @@ def getDocument():
     if platform.system() == 'Darwin':
         subprocess.check_call(['open', 'report3.docx'])
     elif platform.system() == 'Windows':
-        os.startfile("report3.docx")
+        os.startfile('report3.docx')
     # os.startfile(report3) # try either one for windows if the first option gives error
     else:
         subprocess.call('xdg-open', report3)  # for other linux platforms
@@ -453,7 +453,7 @@ def getAllParentChild():
     if platform.system() == 'Darwin':
         subprocess.check_call(['open', 'report1.docx'])
     elif platform.system() == 'Windows':
-        os.startfile("report1.docx")
+        os.startfile('report1.docx')
     # os.startfile(report3) # try either one for windows if the first option gives error
     else:
         subprocess.call('xdg-open', report3)  # for other linux platforms
